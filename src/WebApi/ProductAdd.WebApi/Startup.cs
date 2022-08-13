@@ -1,4 +1,5 @@
-﻿using ProductApp.Persistence;
+﻿using ProductApp.Application;
+using ProductApp.Persistence;
 
 namespace ProductAdd.WebApi
 {
@@ -14,7 +15,8 @@ namespace ProductAdd.WebApi
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddPersistenceServices();
+            services.AddApplicationRegistration();
+            services.AddPersistenceRegistration();
             services.AddRazorPages();
         }
         public void Configure(WebApplication app, IWebHostEnvironment env)

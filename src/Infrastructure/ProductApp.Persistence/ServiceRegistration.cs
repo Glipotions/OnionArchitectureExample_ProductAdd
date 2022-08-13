@@ -9,7 +9,7 @@ namespace ProductApp.Persistence
     public static class ServiceRegistration
     {
 
-        public static void AddPersistenceServices(this IServiceCollection serviceCollection)
+        public static void AddPersistenceRegistration(this IServiceCollection serviceCollection)
         {
             serviceCollection.AddDbContext<ApplicationDbContext>(opt => opt.UseInMemoryDatabase("memoryDb"));
 
